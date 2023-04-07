@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+      <link rel="stylesheet" href="style.css">
+      <link rel="icon" type="image/x-icon" href="icon.png">
+      <title>Russia Sites Project</title>
+   </head>
+   
+   <body>
+      
+      <p class="citydesc">
+         <!-- Description -->
+         Sochi is a city located in great country of Russia.<br>
+         This place contains a lot of Russian culture and pride for the country it resides in<br>with some aspects that make it special, such as the fact that they have a larger amount<br>of English speakers than other cities in Russia.<br>
+         <br><br>
+         GDP per capita: $<span id="gdppercapita">0</span><br>
+         Literacy Rate: <span id="literacyrate">0</span>%<br>
+         Life Expectancy: <span id="lifeexpectancy">0</span> Years<br>
+         <br><br><br><br>
+         <!-- Photos -->
+         <span>Photographs of Sochi:</span><br>
+         <button style="background-image: url('https://www.nationsonline.org/gallery/Russia/Sochi-harbor.jpg');" title="Photograph of a Sochi harbor"></button>
+         <button style="background-image: url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i1zQSe_WDwXY/v1/1200x-1.jpg');" title=""></button>
+         <br>
+         <button style="background-image: url('https://www.worldatlas.com/r/w768/upload/3e/44/27/sochi-olympic-park-russia-zotov-dmitrii.jpg');"></button>
+         <button style="background-image: url('https://static01.nyt.com/images/2013/03/26/sports/OLYMPICS1vignette/OLYMPICS1vignette-superJumbo.jpg');"></button>
+         <br><br>
+         Interesting Aspects of Sochi's Culture:<br>
+         <br>
+         (1) English is more commonly spoken in Sochi than other Russian cities.<br>
+         (2) Russia Day is a holiday that is celebrated in Russia that<br>celebrates famous Russian People and Russian Achievements.<br>
+         (3) The most common religion currently in Russia is Christian Orthodox<br>
+         <br><br><br><br>
+         
+         <!-- Video -->
+         <span>Video | History of Russia:</span><br>
+         <br>
+         <iframe width="420" height="345" src="https://www.youtube.com/embed/mONj9zjRjLQ"></iframe>
+         <br><br><br><br><br><br><br><br>
+         Personal Reflection:<br>
+         <br>
+         This city would be good to live in because of the steady<br>form of income that would keep someone secure.<br>
+         Knowing that there wouldn't be any <br>devastating financial problems would be great.<br>However,
+         the low life expectancy isn't too <br>great. This low factor shows that <br>healthcare may be a bit of a problem.
+      </p>
+      
+      <div class="banner">Sochi</div>
+      <div class="gitban">Github:  <a href="https://github.com" style="margin: 1%;">Source</a></div>
+   </body>
+   
+   <script>
+      var gdp = 0
+      var lr = 0
+      var le = 0
+      
+      setInterval(function () {
+         if (gdp != 12194) {
+            if (gdp >= 12190) {gdp = gdp + 1;}
+            else if (gdp >= 12100) {gdp = gdp + 10;}
+            else if (gdp < 12100) {gdp = gdp + 100;}
+            document.getElementById("gdppercapita").innerHTML = gdp;
+         }
+         if (lr != 9969) {
+            if (lr >= 9960) {lr = lr + 1;}
+            else if (lr >= 9900) {lr = lr + 10;}
+            else if (lr < 9900) {lr = lr + 100;}
+            
+            var i = 0
+            i = lr / 100;
+            
+            document.getElementById("literacyrate").innerHTML = i;
+         }
+         if (le != 7134) {
+            if (le >= 7100) {le = le + 1;}
+            else if (le >= 7000) {le = le + 10;}
+            else if (le < 7000) {le = le + 100;}
+            
+            var i = 0
+            i = le / 100;
+            
+            document.getElementById("lifeexpectancy").innerHTML = i;
+         }
+      }, 7);
+   </script>
+</html>
